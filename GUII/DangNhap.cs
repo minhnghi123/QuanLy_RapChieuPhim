@@ -52,7 +52,11 @@ namespace GUII
                     MessageBox.Show("Tai Khoan Hoac Mat Khau Khong Chinh Xac");
                     return; 
             }
-            MessageBox.Show("DANG NHAP THANH CONG"); 
+            MessageBox.Show("DANG NHAP THANH CONG");
+            this.Hide();
+            var f = new FrmQlNhanVien();
+            f.Show();
+
         }
 
         private void DangNhap_Load(object sender, EventArgs e)
