@@ -1,0 +1,11 @@
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\BLL.dll
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\BLL.pdb
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\DAL.dll
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\DTO.dll
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\DAL.pdb
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\bin\Debug\DTO.pdb
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\obj\Debug\BLL.dll
+C:\Users\TUF-GAMING\Desktop\OOAD_Supermarket\QLY_RAPCHIEUPHIM\BLL\obj\Debug\BLL.pdb
