@@ -52,17 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonGhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonGhe.Designer.cs">
+      <DependentUpon>ChonGhe.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DatChoXemPhim.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DatChoXemPhim.Designer.cs">
-      <DependentUpon>DatChoXemPhim.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQlNhanVien.cs">
       <SubType>Form</SubType>
@@ -70,13 +70,16 @@
     <Compile Include="FrmQlNhanVien.Designer.cs">
       <DependentUpon>FrmQlNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DatChoXemPhim.resx">
-      <DependentUpon>DatChoXemPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQlNhanVien.resx">
       <DependentUpon>FrmQlNhanVien.cs</DependentUpon>

@@ -13,11 +13,7 @@ namespace BLL
     {   QLNhanVienDL cn=new QLNhanVienDL();
         ChiNhanhDL cn1 = new ChiNhanhDL();
         LoaiNhanVienDL cn2 = new LoaiNhanVienDL();
-       
-        public DataTable laydsNhanVien()
-        {
-            return cn.LayNhanvien();
-        }
+      
         public DataTable laydsNhanVienbt()
         {
             return cn.LayNhanvienbt();

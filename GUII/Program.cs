@@ -16,7 +16,7 @@ namespace GUII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmQlNhanVien());
+            Application.Run(new DangNhap());
         }
     }
 }

@@ -1,0 +1,8 @@
+﻿.vs
+BLL/obj
+DAL/obj/Debug/DAL.csproj.FileListAbsolute.txt
+GUII/bin
+GUII/obj
+DAL/obj
+DTO/bin
+DTO/obj

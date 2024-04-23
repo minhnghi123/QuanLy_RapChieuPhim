@@ -16,7 +16,7 @@ namespace OpenLibrary.DataAccess
         SqlConnection con;
         private DataHelper()
         {
-            ChuoiKetNoi = "Data Source=ACER\\PHUOC;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+            ChuoiKetNoi = "Data Source=LAPTOP-PICGBI40\\HONGPHUC;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;";
             con = new SqlConnection(ChuoiKetNoi);
         }
         public static DataHelper GetInstance()
