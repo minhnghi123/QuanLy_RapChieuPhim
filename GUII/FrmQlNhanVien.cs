@@ -127,7 +127,7 @@ namespace GUII
                    
                     txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT"].Value.ToString();
                     txtDiaChi.Text = dr[0]["Diachi"].ToString();
-        var s= dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString(); ;
+                    var s= dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString(); ;
                     txtMaNV.Text = dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString();
                 
                     txtEmail.Text= txtMaNV.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();

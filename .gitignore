@@ -1,0 +1,9 @@
+﻿.vs
+BLL/bin
+BLL/obj
+DAL/bin
+DAL/obj
+DTO/obj
+GUII/bin
+GUII/obj
+DTO/bin
