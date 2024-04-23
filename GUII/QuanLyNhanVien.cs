@@ -21,5 +21,10 @@ namespace GUII
         {
 
         }
+
+        private void QuanLyNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
