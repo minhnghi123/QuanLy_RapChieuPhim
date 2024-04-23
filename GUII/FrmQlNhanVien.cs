@@ -18,6 +18,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.IO;
 using BLL;
 using DTO;
+using DevExpress.Drawing.Internal.Fonts;
 namespace GUII
 {
     public partial class FrmQlNhanVien : Form
@@ -43,9 +44,10 @@ namespace GUII
 
         private void FrmQlNhanVien_Load(object sender, EventArgs e)
         {
+            txtMaNV.ReadOnly = true;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = ctr.laydsNhanVien();
-            comboboxTenLoaiNV.DataSource = ctr.laydsloaiNhanVien();
+            dataGridView1.DataSource = ctr.laydsNhanVienbt();
+           /* comboboxTenLoaiNV.DataSource = ctr.laydsloaiNhanVien();
             comboboxTenLoaiNV.DisplayMember = "Tenloai";
 
             comboboxTenCN.DataSource = ctr.laydsChiNhanh();
@@ -55,7 +57,7 @@ namespace GUII
             cbbTenChiNhanh.DisplayMember = "TenChiNhanh";
 
             cbbTenloai.DataSource = ctr.laydsloaiNhanVien();
-            cbbTenloai.DisplayMember = "Tenloai";
+            cbbTenloai.DisplayMember = "Tenloai";*/
          //  pHinhand.Image = Properties.Resources.boemployee_32x32;
 
 
@@ -64,13 +66,11 @@ namespace GUII
         private bool xacthucthongtin()
         {
             if (txtHovaTen.Text == "") return false;
-            if (txtCMND.Text == "") return false;
+            if (txtEmail.Text == "") return false;
             if (txtSDT.Text == "") return false;
             if (txtDiaChi.Text == "") return false;
-            if (txtEmail.Text == "") return false;
-            if (txtMaNV.Text == "") return false;
-            if (txtUserName.Text == "") return false;
-            if (TxtPassword.Text == "") return false;
+
+          
             return true;
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -79,23 +79,18 @@ namespace GUII
             {
                 var s = ctr.laydsNhanVienbt();
                 DataRow k = s.NewRow();
-
-                k["HoTenNV"] = txtHovaTen.Text;
-                k["CMND"] = txtCMND.Text;
+                k["HoTen"] = txtHovaTen.Text;
+            
                 k["SDT"] = txtSDT.Text;
                 k["Diachi"] = txtDiaChi.Text;
-                k["email"] = txtEmail.Text;
-                k["MaNV"] = int.Parse(txtMaNV.Text);
-                DataTable ChiNhanh = ctr.laydsChiNhanh();
-                DataTable LoaiNV = ctr.laydsloaiNhanVien();
-                var i = comboboxTenLoaiNV.SelectedIndex;
+                k["Email"] = txtEmail.Text;
 
-                k["Maloainv"] = int.Parse(LoaiNV.Rows[i]["Maloai"].ToString());
-                i = comboboxTenCN.SelectedIndex;
-                k["MaCN"] = int.Parse(ChiNhanh.Rows[i]["MachiNhanh"].ToString());
 
-                k["Username"] = txtUserName.Text;
-                k["password"] = TxtPassword.Text;
+
+
+
+
+
                 if (pHinhand.Image != null) {
                 
               //      byte[] tam = Utility.ImageToByteArray(pHinhand.Image);
@@ -108,55 +103,34 @@ namespace GUII
                 if (ctr.ThemMoiNhanvien(k) == false) MessageBox.Show("Lỗi");
             }
            else MessageBox.Show("Vui lồng điền đủ thông tin");
-            dataGridView1.DataSource = ctr.laydsNhanVien();
+            dataGridView1.DataSource = ctr.laydsNhanVienbt();
         }
 
         
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            comboboxTenLoaiNV.DataSource = ctr.laydsloaiNhanVien();
-            comboboxTenLoaiNV.DisplayMember = "Tenloai";
-            comboboxTenCN.DataSource = ctr.laydsChiNhanh();
-            comboboxTenCN.DisplayMember = "TenChiNhanh";
+
             //dataGridView1.CurrentRow.Cells[0].Value.ToString();
-         //   var s = dataGridView1.CurrentRow?.Cells["MaNV"].Value.ToString();
-            if (dataGridView1.CurrentRow!=null && dataGridView1.CurrentRow.Index < dataGridView1.RowCount && dataGridView1.CurrentRow?.Cells["MaNV"].Value.ToString()!=null && dataGridView1.CurrentRow?.Cells["MaNV"].Value.ToString() != "")
+            //   var s = dataGridView1.CurrentRow?.Cells["MaNV"].Value.ToString();
+            if (dataGridView1.CurrentRow == null) return;
+           // if (dataGridView1.CurrentRow.Index > dataGridView1.Rows.Count)
+          
+            if (dataGridView1.CurrentRow.Index < dataGridView1.Rows.Count)
             {
-                string dk1 = "MaNV = '" + dataGridView1.CurrentRow.Cells["MaNV"].Value.ToString() + "'";
-                DataTable nvkethop = ctr.laydsNhanVien();
+                string dk1 = "MaNguoiDung  = '" + dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString() + "'";
+                DataTable nvkethop = ctr.laydsNhanVienbt();
                 DataRow[]  dr = nvkethop.Select(dk1);
                 if(dr !=null && dr.Length != 0 )
                 {
-                    txtHovaTen.Text = dr[0]["HoTenNV"].ToString();
-                    txtCMND.Text = dr[0]["CMND"].ToString();
+                    txtHovaTen.Text = dr[0]["HoTen"].ToString();
+                   
                     txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT"].Value.ToString();
                     txtDiaChi.Text = dr[0]["Diachi"].ToString();
-                    txtEmail.Text = dr[0]["email"].ToString();
-                    txtMaNV.Text = dataGridView1.CurrentRow.Cells["MaNV"].Value.ToString();
-                    txtUserName.Text = dr[0]["Username"].ToString(); ;
-                    TxtPassword.Text = dr[0]["password"].ToString(); ;
-  
-                    DataTable ChiNhanh = ctr.laydsChiNhanh();
-          
-                    if (dr[0]["hinhanh"] != null )
-                    {
-                       byte[] bytes = (byte[]) dr[0]["hinhanh"];
-                     
-
-                    }
-                      //  k[""] = System.Text.Encoding.UTF8.GetString(Utility.ImageToByteArray(pHinhand.Image)); ;
-                    string dk = "MachiNhanh = '" + dr[0]["MaCN"].ToString() + "'";
-                    DataRow[] dr2 = ChiNhanh.Select(dk);
-                    DataTable LoaiNV = ctr.laydsloaiNhanVien();
-
-                    comboboxTenCN.SelectedItem = ChiNhanh.Rows.IndexOf(dr2[0]);
-                    // cbbTenChiNhanh.Selected. = ChiNhanh.Rows.IndexOf(dr2[0]);
-                    dk = "Maloai = '" + dr[0]["Maloainv"].ToString() + "'";
-                    DataRow[] dr3 = LoaiNV.Select(dk);
-
-                    comboboxTenLoaiNV.SelectedIndex = LoaiNV.Rows.IndexOf(dr3[0]);
-                    //    cbbTenloai.SelectedIndex = LoaiNV.Rows.IndexOf(dr3[0]);
+        var s= dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString(); ;
+                    txtMaNV.Text = dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString();
+                
+                    txtEmail.Text= txtMaNV.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
                 }
 
 
@@ -173,7 +147,7 @@ namespace GUII
                 if (ctr.XoaNhanVien(int.Parse(txtMaNV.Text)) == false) MessageBox.Show("Lỗi");
             }    
             else MessageBox.Show("Vui lồng điền đủ thông tin");
-            dataGridView1.DataSource = ctr.laydsNhanVien();
+            dataGridView1.DataSource = ctr.laydsNhanVienbt();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -183,28 +157,25 @@ namespace GUII
                 var s = ctr.laydsNhanVienbt();
                 DataRow k = s.NewRow();
 
-                k["HoTenNV"] = txtHovaTen.Text;
-                k["CMND"] = txtCMND.Text;
+                k["HoTen"] = txtHovaTen.Text;
+                k["CMND"] = txtEmail.Text;
                 k["SDT"] = txtSDT.Text;
                 k["Diachi"] = txtDiaChi.Text;
-                k["email"] = txtEmail.Text;
-                k["MaNV"] = int.Parse(txtMaNV.Text);
-                DataTable ChiNhanh = ctr.laydsChiNhanh();
-                DataTable LoaiNV = ctr.laydsloaiNhanVien();
-                var i = comboboxTenLoaiNV.SelectedIndex;
+        
+                k["Manguoidung"] = int.Parse(txtMaNV.Text);
+              
+             
 
-                k["Maloainv"] = int.Parse(LoaiNV.Rows[i]["Maloai"].ToString());
-                i = comboboxTenCN.SelectedIndex;
-                k["MaCN"] = int.Parse(ChiNhanh.Rows[i]["MachiNhanh"].ToString());
                
             
-                k["Username"] = txtUserName.Text;
-                k["password"] = TxtPassword.Text;
+               
+            
+                
            
                 if (ctr.SuaNhanVien(k) == false) MessageBox.Show("Lỗi");
             }
             else MessageBox.Show("Vui lồng điền đủ thông tin");
-            dataGridView1.DataSource = ctr.laydsNhanVien();
+            dataGridView1.DataSource = ctr.laydsNhanVienbt();
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -234,6 +205,11 @@ namespace GUII
         }
 
         private void comboboxTenLoaiNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaNV_TextChanged(object sender, EventArgs e)
         {
 
         }
