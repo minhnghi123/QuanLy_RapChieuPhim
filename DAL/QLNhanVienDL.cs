@@ -61,7 +61,7 @@ namespace OpenLibrary.DataAccess
                 var s = dr.ItemArray;
                 String dk = " MaNguoiDung  = " + dr["MaNguoiDung"];
 
-               dt.UpdateRowTableDungThuTuCot(nhanvien, dk, s);
+               dt.UpdateRowTable(nhanvien, dk, "HoTen", dr["HoTen"], "Email", dr["Email"], "SDT", dr["SDT"], "DiaChi", dr["DiaChi"]);
 
                 dt.UpdateFromDataTableToDataBase("NguoiDung", nhanvien);
                 return true;

@@ -39,16 +39,16 @@
             this.pHinhand = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.tx = new System.Windows.Forms.Label();
             this.MaNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.tx = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pHinhand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +151,48 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1067, 440);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // MaNguoiDung
+            // 
+            this.MaNguoiDung.DataPropertyName = "MaNguoiDung";
+            this.MaNguoiDung.HeaderText = "Mã nguoi dung";
+            this.MaNguoiDung.MinimumWidth = 8;
+            this.MaNguoiDung.Name = "MaNguoiDung";
+            this.MaNguoiDung.Width = 150;
+            // 
+            // HoTenNV
+            // 
+            this.HoTenNV.DataPropertyName = "HoTen";
+            this.HoTenNV.HeaderText = "Họ và Tên";
+            this.HoTenNV.MinimumWidth = 8;
+            this.HoTenNV.Name = "HoTenNV";
+            this.HoTenNV.Width = 150;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "SĐT ";
+            this.SDT.MinimumWidth = 8;
+            this.SDT.Name = "SDT";
+            this.SDT.Width = 150;
+            // 
+            // Diachi
+            // 
+            this.Diachi.DataPropertyName = "Diachi";
+            this.Diachi.HeaderText = "Địa chỉ ";
+            this.Diachi.MinimumWidth = 8;
+            this.Diachi.Name = "Diachi";
+            this.Diachi.Width = 150;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email ";
+            this.email.MinimumWidth = 8;
+            this.email.Name = "email";
+            this.email.Width = 150;
             // 
             // btnThem
             // 
@@ -199,46 +240,6 @@
             this.tx.Size = new System.Drawing.Size(103, 20);
             this.tx.TabIndex = 25;
             this.tx.Text = "Mã nhân viên";
-            // 
-            // MaNguoiDung
-            // 
-            this.MaNguoiDung.DataPropertyName = "MaNguoiDung";
-            this.MaNguoiDung.HeaderText = "Mã nguoi dung";
-            this.MaNguoiDung.MinimumWidth = 8;
-            this.MaNguoiDung.Name = "MaNguoiDung";
-            this.MaNguoiDung.Width = 150;
-            // 
-            // HoTenNV
-            // 
-            this.HoTenNV.DataPropertyName = "HoTen";
-            this.HoTenNV.HeaderText = "Họ và Tên";
-            this.HoTenNV.MinimumWidth = 8;
-            this.HoTenNV.Name = "HoTenNV";
-            this.HoTenNV.Width = 150;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "SĐT ";
-            this.SDT.MinimumWidth = 8;
-            this.SDT.Name = "SDT";
-            this.SDT.Width = 150;
-            // 
-            // Diachi
-            // 
-            this.Diachi.DataPropertyName = "Diachi";
-            this.Diachi.HeaderText = "Địa chỉ ";
-            this.Diachi.MinimumWidth = 8;
-            this.Diachi.Name = "Diachi";
-            this.Diachi.Width = 150;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email ";
-            this.email.MinimumWidth = 8;
-            this.email.Name = "email";
-            this.email.Width = 150;
             // 
             // FrmQlNhanVien
             // 
