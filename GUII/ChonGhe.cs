@@ -78,5 +78,10 @@ namespace DuAn_RapChieuPhim
             }
             clickPlum++;
         }
+
+        private void ChonGhe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
