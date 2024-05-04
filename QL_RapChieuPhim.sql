@@ -131,7 +131,10 @@ CREATE TABLE NguoiDung (
     HoTen VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,
     SDT VARCHAR(255),
-    DiaChi VARCHAR(255)
+    DiaChi VARCHAR(255),
+	hinhanh varbinary(max) null,
+
+
 )
 GO
 

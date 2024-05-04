@@ -46,5 +46,25 @@ namespace GUII
         {
 
         }
+
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DatChoXemPhim_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

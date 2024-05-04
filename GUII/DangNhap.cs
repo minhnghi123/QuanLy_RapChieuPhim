@@ -54,10 +54,11 @@ namespace GUII
             }
             MessageBox.Show("DANG NHAP THANH CONG");
             this.Hide();
-            var f = new QuanLyNhanVien();
+            var f = new FrmQlNhanVien();
             f.Show();
+
         }
-        //test
+
         private void DangNhap_Load(object sender, EventArgs e)
         {
 
