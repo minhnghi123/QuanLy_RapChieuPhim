@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DuAn_RapChieuPhim
 {
-    public partial class HoaDon : Form
+    public partial class TaiKhoan : Form
     {
-        public HoaDon()
+        public TaiKhoan()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

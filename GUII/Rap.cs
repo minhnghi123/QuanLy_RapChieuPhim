@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace DuAn_RapChieuPhim
 {
-    public partial class HoaDon : Form
+    public partial class Rap : Form
     {
-        public HoaDon()
+        public Rap()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }

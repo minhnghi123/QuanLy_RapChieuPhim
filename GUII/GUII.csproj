@@ -36,9 +36,13 @@
     <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,6 +80,18 @@
     <Compile Include="DatChoXemPhim.Designer.cs">
       <DependentUpon>DatChoXemPhim.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChiTietPhimDatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietPhimDatVe.Designer.cs">
+      <DependentUpon>frmChiTietPhimDatVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatVeXemPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatVeXemPhim.Designer.cs">
+      <DependentUpon>frmDatVeXemPhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQlNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +118,31 @@
     <Compile Include="QLPhim.Designer.cs">
       <DependentUpon>QLPhim.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rap.Designer.cs">
+      <DependentUpon>Rap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan.Designer.cs">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPhim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPhim.Designer.cs">
+      <DependentUpon>UserControlPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="ChonGhe.resx">
       <DependentUpon>ChonGhe.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatChoXemPhim.resx">
       <DependentUpon>DatChoXemPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietPhimDatVe.resx">
+      <DependentUpon>frmChiTietPhimDatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatVeXemPhim.resx">
+      <DependentUpon>frmDatVeXemPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQlNhanVien.resx">
       <DependentUpon>FrmQlNhanVien.cs</DependentUpon>
@@ -136,6 +183,18 @@
     </Compile>
     <EmbeddedResource Include="QLPhim.resx">
       <DependentUpon>QLPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rap.resx">
+      <DependentUpon>Rap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiKhoan.resx">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPhim.resx">
+      <DependentUpon>UserControlPhim.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
