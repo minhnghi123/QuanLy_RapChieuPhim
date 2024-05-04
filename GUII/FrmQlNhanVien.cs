@@ -41,7 +41,7 @@ namespace GUII
 
         private void FrmQlNhanVien_Load(object sender, EventArgs e)
         {
-            txtMaNV.ReadOnly = true;
+           txtMaNV.Enabled = false;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = ctr.laydsNhanVienbt();
            /* comboboxTenLoaiNV.DataSource = ctr.laydsloaiNhanVien();
@@ -124,10 +124,11 @@ namespace GUII
                    
                     txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT"].Value.ToString();
                     txtDiaChi.Text = dr[0]["Diachi"].ToString();
-        var s= dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString(); ;
+                    var s123= dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString(); ;
+                   
                     txtMaNV.Text = dataGridView1.CurrentRow.Cells["MaNguoiDung"].Value.ToString();
                 
-                    txtEmail.Text= txtMaNV.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+                    txtEmail.Text=dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
                 }
 
 
@@ -155,7 +156,7 @@ namespace GUII
                 DataRow k = s.NewRow();
 
                 k["HoTen"] = txtHovaTen.Text;
-                k["CMND"] = txtEmail.Text;
+                k["Email"] = txtEmail.Text;
                 k["SDT"] = txtSDT.Text;
                 k["Diachi"] = txtDiaChi.Text;
         
@@ -207,6 +208,11 @@ namespace GUII
         }
 
         private void txtMaNV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

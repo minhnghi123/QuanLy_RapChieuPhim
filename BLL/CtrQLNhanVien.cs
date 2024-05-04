@@ -14,22 +14,12 @@ namespace BLL
         ChiNhanhDL cn1 = new ChiNhanhDL();
         LoaiNhanVienDL cn2 = new LoaiNhanVienDL();
        
-        public DataTable laydsNhanVien()
-        {
-            return cn.LayNhanvienbt();
-        }
+        
         public DataTable laydsNhanVienbt()
         {
             return cn.LayNhanvienbt();
         }
-        public DataTable laydsloaiNhanVien()
-        {
-            return cn2.layLoaiNhanVienDL();
-        }
-        public DataTable laydsChiNhanh()
-        {
-            return cn1.LayChiNhanh();
-        }
+        
         public bool ThemMoiNhanvien(DataRow dr)
         {
 
@@ -43,6 +33,7 @@ namespace BLL
                 return
                     false;
             }
+            // test 123
         }
         public bool SuaNhanVien(DataRow dr)
         {
