@@ -33,11 +33,12 @@ namespace DuAn_RapChieuPhim
 
         private void btnQLPhim_Click(object sender, EventArgs e)
         {
-         //   this.Hide();
-       //     var f = new QLPhim();
+            //   this.Hide();
+            //   this.Hide();
+            //     var f = new QLPhim();
             // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-         //   f.Closed += (s, args) => this.Show();
-        //    f.ShowDialog();
+            //   f.Closed += (s, args) => this.Show();
+            //    f.ShowDialog();
         }
 
     }

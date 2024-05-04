@@ -17,6 +17,9 @@ namespace DuAn_RapChieuPhim
             InitializeComponent();
         }
 
-        
+        private void btnThemQLPhim_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

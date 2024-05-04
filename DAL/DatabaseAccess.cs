@@ -11,7 +11,7 @@ namespace DAL
 {
     public static SqlConnection Conncect()
     {
-        string strcon = "Data Source=laptop-jgc12l0k;Initial Catalog=QLY_NHANVIEN;Integrated Security=True";
+        string strcon = "Data Source=ACER\\PHUOC;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
         SqlConnection conn = new SqlConnection(strcon);
         return conn;
     }
@@ -35,7 +35,8 @@ namespace DAL
             {
                 while(r.Read())
                 {
-                    user = r.GetString(0);
+                    // user = r.GetString(0).ToString();
+                    user = r.GetValue(0).ToString();
                     return user; 
                 }
                 r.Close(); 

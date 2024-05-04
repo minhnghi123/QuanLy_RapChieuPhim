@@ -1,4 +1,6 @@
-﻿IF EXISTS(SELECT 1 FROM sys.databases WHERE name ='QL_RapChieuPhim')
+﻿use master
+go
+IF EXISTS(SELECT 1 FROM sys.databases WHERE name ='QL_RapChieuPhim')
 	DROP DATABASE [QL_RapChieuPhim]
 GO
 Create database [QL_RapChieuPhim]
@@ -13,9 +15,17 @@ CREATE TABLE [USER](
 	[PassWord] VARCHAR(20) NOT NULL,
 	[MaLoai] INT NOT NULL
 )
+go
 GO
-INSERT INTO [USER] (UserName,[PassWord]) VALUES ('user','123', 2)
-INSERT INTO [USER] (UserName,[PassWord]) VALUES ('admin','123', 1)
+create proc [dbo].[proc_login] @user nvarchar(50), @pass nvarchar(50)
+as
+begin
+	select * from [USER] where UserName = @user and [PassWord] =@pass
+end
+GO
+GO
+INSERT INTO [USER] (UserName,[PassWord],[MaLoai]) VALUES ('user','123', 2)
+INSERT INTO [USER] (UserName,[PassWord],[MaLoai]) VALUES ('admin','123', 1)
 GO
 
 CREATE TABLE Phim (
@@ -26,6 +36,7 @@ CREATE TABLE Phim (
     TheLoai NVARCHAR(250),
     ThoiLuong INT,
     MoTa NVARCHAR(MAX),
+	Hinanh varbinary(max),
 )
 
 GO
@@ -104,6 +115,11 @@ CREATE TABLE PhongChieu (
     FOREIGN KEY (MaRapChieu) REFERENCES RapChieu(MaRapChieu)
 )
 GO
+INSERT INTO PhongChieu (MaRapChieu, SoGhe) VALUES (1,120) 
+INSERT INTO PhongChieu (MaRapChieu, SoGhe) VALUES (1,120) 
+INSERT INTO PhongChieu (MaRapChieu, SoGhe) VALUES (2,120) 
+INSERT INTO PhongChieu (MaRapChieu, SoGhe) VALUES (2,120) 
+go
 
 CREATE TABLE GheNgoi (
     MaGheNgoi INT PRIMARY KEY IDENTITY(1, 1),
@@ -125,6 +141,31 @@ CREATE TABLE SuatChieu (
     FOREIGN KEY (MaPhongChieu) REFERENCES PhongChieu(MaPhongChieu)
 )
 GO
+select format(getdate(), 'yyyy-MM-dd HH:mm:ss.fff')
+
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (1,1,'2024-05-04 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (2,1,'2024-05-04 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (3,1,'2024-05-04 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (4,1,'2024-05-04 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (5,1,'2024-05-04 23:00:00',10000)
+
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (1,1,'2024-05-06 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (2,1,'2024-05-06 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (3,1,'2024-05-06 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (4,1,'2024-05-06 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (5,1,'2024-05-06 23:00:00',10000)
+go
+create view view_phimdangchieutrongngay 
+as
+select phim.*,SuatChieu.GiaVe,SuatChieu.MaPhongChieu,SuatChieu.MaSuatChieu,.SuatChieu.ThoiGianChieu
+from
+Phim INNER join SuatChieu on Phim.MaPhim = SuatChieu.MaPhim
+where  convert(varchar(10), ThoiGianChieu, 102)  = convert(varchar(10), getdate(), 102) and ThoiGianChieu > GETDATE()
+
+go
+select * from view_phimdangchieutrongngay
+go 
+
 
 CREATE TABLE NguoiDung (
     MaNguoiDung INT PRIMARY KEY IDENTITY(1, 1),
