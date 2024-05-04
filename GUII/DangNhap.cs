@@ -28,7 +28,7 @@ namespace GUII
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void label3_Click(object sender, EventArgs e)
