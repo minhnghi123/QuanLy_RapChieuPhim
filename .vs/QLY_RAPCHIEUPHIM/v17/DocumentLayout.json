@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\TUF-GAMING\\Desktop\\QLY_RAPCHIEUPHIM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|C:\\Users\\TUF-GAMING\\Desktop\\QLY_RAPCHIEUPHIM\\guii\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|c:\\users\\tuf-gaming\\desktop\\qly_rapchieuphim\\guii\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|solutionrelative:guii\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|c:\\users\\tuf-gaming\\desktop\\qly_rapchieuphim\\guii\\datchoxemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|C:\\Users\\TUF-GAMING\\Desktop\\QLY_RAPCHIEUPHIM\\guii\\datchoxemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{70648E3C-3131-434B-9EB5-E9B1E1B7CD00}|GUII\\GUII.csproj|solutionrelative:guii\\datchoxemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -93,8 +93,7 @@
               "ToolTip": "C:\\Users\\TUF-GAMING\\Desktop\\QLY_RAPCHIEUPHIM\\GUII\\DatChoXemPhim.cs [Design]",
               "RelativeToolTip": "GUII\\DatChoXemPhim.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T04:55:21.66Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-16T04:55:21.66Z"
             },
             {
               "$type": "Document",
@@ -153,8 +152,7 @@
               "RelativeToolTip": "GUII\\DatChoXemPhim.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAEwC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T04:58:26.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T04:58:26.829Z"
             },
             {
               "$type": "Document",
@@ -166,8 +164,7 @@
               "RelativeToolTip": "GUII\\DangNhap.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T03:50:48.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T03:50:48.066Z"
             },
             {
               "$type": "Document",
