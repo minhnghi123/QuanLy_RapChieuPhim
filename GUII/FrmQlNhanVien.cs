@@ -9,8 +9,6 @@ using System.Text;
 
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.DirectX.Common.Direct2D;
-using DevExpress.Utils.CommonDialogs;
 using OpenLibrary.Bussiness;
 
 
@@ -18,7 +16,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.IO;
 using BLL;
 using DTO;
-using DevExpress.Drawing.Internal.Fonts;
 namespace GUII
 {
     public partial class FrmQlNhanVien : Form

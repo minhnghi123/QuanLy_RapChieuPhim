@@ -16,7 +16,7 @@ namespace BLL
        
         public DataTable laydsNhanVien()
         {
-            return cn.LayNhanvien();
+            return cn.LayNhanvienbt();
         }
         public DataTable laydsNhanVienbt()
         {
