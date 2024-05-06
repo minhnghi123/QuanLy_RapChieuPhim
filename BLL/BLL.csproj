@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrDatVePhim.cs" />
     <Compile Include="CtrNhanVien.cs" />
     <Compile Include="CtrQLNhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

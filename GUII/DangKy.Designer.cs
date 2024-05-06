@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
-          //  this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.textBox_MatKhauDK = new System.Windows.Forms.TextBox();
             this.textBox_TenTaiKhoanDK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,18 +39,18 @@
             this.lblDN = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
-           // ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
             // 
-            //this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            //this.pictureEdit1.Location = new System.Drawing.Point(21, 21);
-            //this.pictureEdit1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            //this.pictureEdit1.Name = "pictureEdit1";
-            //this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-           // this.pictureEdit1.Size = new System.Drawing.Size(550, 548);
-           // this.pictureEdit1.TabIndex = 1;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(21, 21);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(8);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(550, 548);
+            this.pictureEdit1.TabIndex = 1;
             // 
             // textBox_MatKhauDK
             // 
@@ -146,6 +146,7 @@
             this.btnDangKy.TabIndex = 21;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // DangKy
             // 
@@ -162,12 +163,12 @@
             this.Controls.Add(this.textBox_TenTaiKhoanDK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-           // this.Controls.Add(this.pictureEdit1);
+            this.Controls.Add(this.pictureEdit1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DangKy";
             this.Text = "DangKy";
             this.Load += new System.EventHandler(this.DangKy_Load);
-            //((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +176,7 @@
 
         #endregion
 
-       // private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.TextBox textBox_MatKhauDK;
         private System.Windows.Forms.TextBox textBox_TenTaiKhoanDK;
         private System.Windows.Forms.Label label2;

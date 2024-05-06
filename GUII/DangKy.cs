@@ -32,5 +32,10 @@ namespace DuAn_RapChieuPhim
         {
 
         }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
