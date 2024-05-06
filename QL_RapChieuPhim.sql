@@ -122,15 +122,81 @@ INSERT INTO PhongChieu (MaRapChieu, SoGhe) VALUES (2,120)
 go
 
 CREATE TABLE GheNgoi (
-    MaGheNgoi INT PRIMARY KEY IDENTITY(1, 1),
+    MaGheNgoi varchar(10) ,
     MaPhongChieu INT NOT NULL,
     SoGhe INT NOT NULL,
-    LoaiGhe VARCHAR(255),
+    LoaiGhe NVARCHAR(255),
     TrangThai VARCHAR(255),
-    FOREIGN KEY (MaPhongChieu) REFERENCES PhongChieu(MaPhongChieu)
+    FOREIGN KEY (MaPhongChieu) REFERENCES PhongChieu(MaPhongChieu),
+	primary key(MaGheNgoi,MaPhongChieu)
 )
-GO
+go
 
+go
+
+select * from PhongChieu
+GO
+CREATE proc InsertGheNgoi (@maphong int)
+AS
+BEGIN
+    DECLARE @RowInserted INT = 0;
+    
+    -- Variables for looping through rows
+    DECLARE @i CHAR(1), @j INT;
+    
+    SET @i = 'A'; -- Starting row letter
+    SET @j = 1;   -- Starting row number
+    
+    WHILE @i <= 'E'
+    BEGIN
+        WHILE @j <= 12
+        BEGIN
+            INSERT INTO GheNgoi (MaGheNgoi, MaPhongChieu, SoGhe, LoaiGhe, TrangThai) VALUES  (@i + CAST(@j AS VARCHAR(2)),@maphong, @j, N'Ghế thường', NULL); -- Change MaPhongChieu value accordingly
+            SET @j = @j + 1;
+        END;
+
+        SET @i = CHAR(ASCII(@i) + 1); -- Move to the next letter
+        SET @j = 1;  -- Reset row number for the next letter
+    END;
+
+    SET @RowInserted = @@ROWCOUNT; -- Get the number of rows inserted
+
+    
+END;
+GO
+CREATE proc InsertGheNgoiDoi (@maphong int)
+AS
+BEGIN
+    DECLARE @RowInserted INT = 0;
+    
+    -- Variables for looping through rows
+    DECLARE @i CHAR(1), @j INT;
+    
+    SET @i = 'F'; -- Starting row letter
+    SET @j = 1;   -- Starting row number
+    
+    WHILE @i <= 'F'
+    BEGIN
+        WHILE @j <= 6
+        BEGIN
+            INSERT INTO GheNgoi (MaGheNgoi, MaPhongChieu, SoGhe, LoaiGhe, TrangThai) VALUES  (@i + CAST(@j AS VARCHAR(2)),@maphong, @j, N'Ghế đôi', NULL); -- Change MaPhongChieu value accordingly
+            SET @j = @j + 1;
+        END;
+
+        SET @i = CHAR(ASCII(@i) + 1); -- Move to the next letter
+        SET @j = 1;  -- Reset row number for the next letter
+    END;
+
+    SET @RowInserted = @@ROWCOUNT; -- Get the number of rows inserted
+
+    
+END;
+GO
+-- exec InsertGheNgoi
+/*
+
+*/
+go
 CREATE TABLE SuatChieu (
     MaSuatChieu INT PRIMARY KEY IDENTITY(1, 1),
     MaPhim INT NOT NULL,
@@ -154,6 +220,14 @@ insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (2,1,'202
 insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (3,1,'2024-05-06 23:00:00',10000)
 insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (4,1,'2024-05-06 23:00:00',10000)
 insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (5,1,'2024-05-06 23:00:00',10000)
+
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (5,1,'2024-05-06 23:30:00',10000)
+
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (1,1,'2024-05-07 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (2,1,'2024-05-07 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (3,1,'2024-05-07 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (4,1,'2024-05-07 23:00:00',10000)
+insert into suatchieu (MaPhim,MaPhongChieu,ThoiGianChieu,GiaVe) values (5,1,'2024-05-07 23:00:00',10000)
 go
 create view view_phimdangchieutrongngay 
 as
@@ -178,19 +252,29 @@ CREATE TABLE NguoiDung (
 
 )
 GO
-
+GO
+exec InsertGheNgoiDoi 1
+exec InsertGheNgoiDoi 2
+exec InsertGheNgoiDoi 3
+exec InsertGheNgoiDoi 4
+exec InsertGheNgoi 1
+exec InsertGheNgoi 2
+exec InsertGheNgoi 3
+exec InsertGheNgoi 4
+go
 CREATE TABLE Ve (
     MaVe INT PRIMARY KEY IDENTITY(1, 1),
     MaSuatChieu INT NOT NULL,
-    MaGheNgoi INT NOT NULL,
-    MaNguoiDung INT NOT NULL,
+    MaGheNgoi varchar(10) NOT NULL,
+    MaNguoiDung INT ,
     GiaVe DECIMAL(10,2),
     MaGiamGia VARCHAR(255),
-    PhuongThucThanhToan VARCHAR(255),
+    PhuongThucThanhToan NVARCHAR(255),
     NgayDat DATETIME NOT NULL,
     TrangThai VARCHAR(255),
     FOREIGN KEY (MaSuatChieu) REFERENCES SuatChieu(MaSuatChieu),
-    FOREIGN KEY (MaGheNgoi) REFERENCES GheNgoi(MaGheNgoi),
-    FOREIGN KEY (MaNguoiDung) REFERENCES NguoiDung(MaNguoiDung)
+    --FOREIGN KEY (MaGheNgoi) REFERENCES GheNgoi(MaGheNgoi),
+    --FOREIGN KEY (MaNguoiDung) REFERENCES NguoiDung(MaNguoiDung)
 )
-GO
+
+select* from view_phimdangchieutrongngay

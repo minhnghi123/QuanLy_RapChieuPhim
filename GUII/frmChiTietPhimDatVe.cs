@@ -36,14 +36,15 @@ namespace GUII
             richTextBox1.ReadOnly = true;
             textBox5.ReadOnly = true;
             textBox1.Text = dr["GiaVe"].ToString();
-
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            var f = new HoaDon();
+            var f = new ChonGhe();
+            ChonGhe.dr = dr;
             f.Show();
         }
     }

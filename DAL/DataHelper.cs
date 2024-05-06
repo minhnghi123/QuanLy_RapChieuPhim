@@ -16,7 +16,7 @@ namespace OpenLibrary.DataAccess
         SqlConnection con;
         private DataHelper()
         {
-            ChuoiKetNoi = "Data Source=ALIEN\\SQLEXPRESS;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+            ChuoiKetNoi = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
             con = new SqlConnection(ChuoiKetNoi);
         }
         public static DataHelper GetInstance()
@@ -120,6 +120,68 @@ namespace OpenLibrary.DataAccess
                 }
             }
         }
+        public int ExecuteNonQuery(string query, object[] parameter = null)
+        {
+            int data = 0;
+
+            con.Open();
+
+
+            SqlCommand command = new SqlCommand(query, con);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            data = command.ExecuteNonQuery();
+
+
+            con.Close();
+            return data;
+        }
+
+        public object ExecuteScalar(string query, object[] parameter = null)
+        {
+            object data = 0;
+
+
+
+
+            SqlCommand command = new SqlCommand(query, con);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            data = command.ExecuteScalar();
+
+
+
+            return data;
+        }
+
     }
+
+
 }
 

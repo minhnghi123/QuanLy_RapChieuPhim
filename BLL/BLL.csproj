@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonGhe.cs" />
     <Compile Include="ctrDatVePhim.cs" />
+    <Compile Include="ctrHoaDon.cs" />
     <Compile Include="CtrNhanVien.cs" />
     <Compile Include="CtrQLNhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
