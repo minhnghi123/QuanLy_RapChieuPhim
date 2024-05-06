@@ -104,7 +104,7 @@ namespace DuAn_RapChieuPhim
         private void phimToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var f = new Phim();
+            var f = new frmDatVeXemPhim();
             // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
             f.Closed += (s, args) => this.Show();
             f.ShowDialog();
