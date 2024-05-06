@@ -229,6 +229,7 @@
     <EmbeddedResource Include="Rap.resx">
       <DependentUpon>Rap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>

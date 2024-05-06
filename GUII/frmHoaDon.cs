@@ -16,5 +16,17 @@ namespace GUII
         {
             InitializeComponent();
         }
+
+        private void frmHoaDon_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer2.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
