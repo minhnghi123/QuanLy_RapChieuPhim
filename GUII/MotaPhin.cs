@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DuAn_RapChieuPhim
+namespace GUII
 {
-    public partial class QLPhim : Form
+    public partial class MotaPhin : Form
     {
-        public QLPhim()
+        public MotaPhin()
         {
             InitializeComponent();
         }
+       
+        public void txt_mota_TextChanged(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }
-*/

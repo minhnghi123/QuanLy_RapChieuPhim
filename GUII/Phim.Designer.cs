@@ -1,4 +1,5 @@
-﻿namespace DuAn_RapChieuPhim
+﻿/*
+namespace DuAn_RapChieuPhim
 {
     partial class Phim
     {
@@ -962,4 +963,4 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label14;
     }
-}
+}*/

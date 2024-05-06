@@ -1,4 +1,4 @@
-﻿namespace DuAn_RapChieuPhim
+﻿/*namespace DuAn_RapChieuPhim
 {
     partial class QLPhim
     {
@@ -354,4 +354,4 @@
         private DevExpress.XtraEditors.SimpleButton btnSuaQLPhim;
         private DevExpress.XtraEditors.SimpleButton btnXoaQLPhim;
     }
-}
+}*/

@@ -11,7 +11,7 @@ namespace DAL
 {
     public static SqlConnection Conncect()
     {
-        string strcon = "Data Source=laptop-jgc12l0k;Initial Catalog=QLY_NHANVIEN;Integrated Security=True";
+        string strcon = "Data Source=ALIEN\\SQLEXPRESS;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         SqlConnection conn = new SqlConnection(strcon);
         return conn;
     }
@@ -34,9 +34,17 @@ namespace DAL
             if (r.HasRows)
             {
                 while(r.Read())
+
                 {
-                    user = r.GetString(0);
-                    return user; 
+                    if(!r.IsDBNull(0))
+                    {
+                        if (r.GetFieldType(0) == typeof(string))
+                        {
+                            user = r.GetString(0);
+                            return user; 
+                        }
+                    }
+                    
                 }
                 r.Close(); 
                 conn.Close();   

@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
-using BLL; 
+using BLL;
+using QuanLySieuThi.quanly;
 namespace GUII
 {
     public partial class DangNhap : Form
@@ -54,7 +55,7 @@ namespace GUII
             }
             MessageBox.Show("DANG NHAP THANH CONG");
             this.Hide();
-            var f = new FrmQlNhanVien();
+            var f = new sanpham();
             f.Show();
 
         }

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace OpenLibrary.DataAccess
 {
-    class DataHelper
+    public class DataHelper
     {       
         private static DataHelper dt = null;
         DataSet ds = new DataSet();

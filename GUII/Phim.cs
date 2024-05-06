@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DuAn_RapChieuPhim
+/*namespace DuAn_RapChieuPhim
 {
     public partial class Phim : Form
     {
@@ -42,3 +42,4 @@ namespace DuAn_RapChieuPhim
 
     }
 }
+*/
