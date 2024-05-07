@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GUII
 {
-    public static class Utility
+    public static class Utility_img
     {
        
             public static Image ByteArrayToImage(byte[] fileBytes)

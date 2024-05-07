@@ -42,7 +42,7 @@ namespace GUII
                 if (dtRow["Hinanh"] != DBNull.Value)
                 {
                     byte[] bytes = (byte[])dtRow["Hinanh"];
-                    Image img = Utility.ByteArrayToImage(bytes); ;
+                    Image img = Utility_img.ByteArrayToImage(bytes); ;
                     item.setPicture(img);
                 }
                 customControls.Add(item);

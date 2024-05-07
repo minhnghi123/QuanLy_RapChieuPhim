@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using static DevExpress.XtraEditors.Mask.MaskSettings;
 using BLL;
 using GUII;
+using QuanLySieuThi.quanly;
 
 namespace DuAn_RapChieuPhim
 {
@@ -81,7 +82,7 @@ namespace DuAn_RapChieuPhim
         private void quảnLýPhimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var f = new frmHoaDon();
+            var f = new sanpham();
             // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
             f.Closed += (s, args) => this.Show();
             f.ShowDialog();
