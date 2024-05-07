@@ -10,7 +10,7 @@ using app = Microsoft.Office.Interop.Excel.Application;
 using System.Windows.Forms;
 using System.IO;
 
-namespace QuanLySieuThi
+namespace GUII
 {
     class XuatExecl
     {
@@ -44,21 +44,21 @@ namespace QuanLySieuThi
         public static void export_phieu(DataGridView g, string duongdan, string tenfile)
         {
             // Khởi tạo đường dẫn đầy đủ
-            duongdan = "C:\\Users\\TUF-GAMING\\Desktop\\QLY_RAPCHIEUPHIM\\excel\\ThongTinPhieu";
+            duongdan = "C:\\Users\\hophu\\Downloads\\CLONE\\CLONE\\QuanLy_RapChieuPhim\\excel\\ThongTinPhieu";
             string fullPath = Path.Combine(duongdan, tenfile + ".xlsx");
 
             app obj = new app();
             obj.Application.Workbooks.Add(); // Kiểm tra thứ tự các tham số
             obj.Columns.ColumnWidth = 25;
 
-            for (int i = 1; i < g.Columns.Count + 1; i++)
+            for (int i = 1; i < g.Columns.Count ; i++)
             {
                 obj.Cells[1, i] = g.Columns[i - 1].HeaderText;
             }
 
             for (int i = 0; i < g.Rows.Count; i++)
             {
-                for (int j = 0; j < g.Columns.Count; j++)
+                for (int j = 0; j < g.Columns.Count-1; j++)
                 {
                     if (g.Rows[i].Cells[j].Value != null)
                     {

@@ -15,6 +15,9 @@ namespace BLL
         {
             return phimdl.getPhiMDangChieu();
         }
-
+        public DataTable getPhiMDangChieuseachr(string text)
+        {
+            return phimdl.getPhiMDangChieuseachr(text);
+        }
     }
 }

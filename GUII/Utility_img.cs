@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GUII
 {
-    public static class Utility
+    public static class Utility_img
     {
        
             public static Image ByteArrayToImage(byte[] fileBytes)
@@ -23,7 +23,7 @@ namespace GUII
 
         public static Byte[] ImageToByteArray(Image img)
         {
-           
+            if (img == null) return null;
             using (var stream = new MemoryStream())
             {
                 img.Save(stream, img.RawFormat);
