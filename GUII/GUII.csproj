@@ -166,9 +166,17 @@
     <Compile Include="QLPhim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLPhim.Designer.cs">
-      <DependentUpon>QLPhim.cs</DependentUpon>
+    <Compile Include="MotaPhin.Designer.cs">
+      <DependentUpon>MotaPhin.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapTenFilecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapTenFilecs.Designer.cs">
+      <DependentUpon>NhapTenFilecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QL_RapChieuPhimDataSet.cs">
       <DependentUpon>QL_RapChieuPhimDataSet.xsd</DependentUpon>
     </Compile>
@@ -208,7 +216,7 @@
     <Compile Include="UserControlPhim.Designer.cs">
       <DependentUpon>UserControlPhim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Utility_img.cs" />
     <Compile Include="XuatExecl.cs" />
     <EmbeddedResource Include="ChonGhe.resx">
       <DependentUpon>ChonGhe.cs</DependentUpon>
@@ -248,9 +256,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QLPhim.resx">
-      <DependentUpon>QLPhim.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Rap.resx">
       <DependentUpon>Rap.cs</DependentUpon>
     </EmbeddedResource>
