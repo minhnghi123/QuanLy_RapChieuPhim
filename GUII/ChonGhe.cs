@@ -153,7 +153,29 @@ namespace DuAn_RapChieuPhim
             dr2["PhuongThucThanhToan"] = "Tiền mặt";
             dr2["NgayDat"] = DateTime.Now;
             dt = ctr.getve().Clone();
-            
+            DataTable xuly = ctr.getve();
+            DataRow[] dr123 = xuly.Select("MaSuatChieu ='"+ dr2["MaSuatChieu"].ToString() + "'");
+            for (int i = 1; i <= 71; i++)
+            {
+                Control[] controls = this.Controls.Find("button" + i, true); // Search for button with name "btn" + i
+                if (controls.Length > 0 && controls[0] is Button)
+                {
+                    Button button = (Button)controls[0];
+                    string s = button.Text;
+
+                    foreach(DataRow d in dr123)
+                    {
+                        if(d["MaGheNgoi"].ToString() == s)
+                        {
+                            button.Enabled = false;
+                            button.Text = "X";
+                        }    
+                    }    
+                    // Do something with the button
+                }
+            }
+
         }
+        
     }
 }

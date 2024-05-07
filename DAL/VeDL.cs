@@ -20,13 +20,18 @@ namespace DAL
         }
         public  void inserVe(DataTable da)
         {
-            foreach (DataRow dr in da.Rows) {
-                 dr[3]=0;
-                string sql= "insert into ve values(" + dr[1] + ",'" + dr[2] + "'," + dr[3] + "," + dr[4] + ",null,N'" + dr[6] + "','" + dr[7] +"',null )";
-                dt.ExecuteNonQuery(sql, null);
+            if(da.Rows.Count > 0)
+            {
+                foreach (DataRow dr in da.Rows)
+                {
+                    dr[3] = 0;
+                    string sql = "insert into ve values(" + dr[1] + ",'" + dr[2] + "'," + dr[3] + "," + dr[4] + ",null,N'" + dr[6] + "','" + dr[7] + "',null )";
+                    dt.ExecuteNonQuery(sql, null);
 
 
+                }
             }
+            
 
             
 
