@@ -19,10 +19,16 @@ namespace DAL
             PhimDangChieu = dt.FillDataTable("select* from view_phimdangchieutrongngay");
             return PhimDangChieu;
         }
+        public DataTable getPhiMDangChieuseachr(string text)
+        {
+            PhimDangChieu = dt.FillDataTable("select* from view_phimdangchieutrongngay  where TenPhim like N'%" + text + "%' ");
+            return PhimDangChieu;
+        }
         public DataTable getPhiM()
         {
             PhimDangChieu = dt.FillDataTable("select* from Phim");
             return PhimDangChieu;
         }
     }
+   
 }

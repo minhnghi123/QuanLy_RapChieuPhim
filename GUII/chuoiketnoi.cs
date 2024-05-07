@@ -12,7 +12,7 @@ namespace QuanLySieuThi
 {
     class chuoiketnoi
     {
-        public static string sqlcon = "Data Source=ALIEN\\SQLEXPRESS;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+        public static string sqlcon = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
         private static SqlConnection mycon;
 
         public static SqlConnection Mycon
@@ -120,7 +120,27 @@ namespace QuanLySieuThi
             }
 
         }
+        public static void them_dlbinary(string sql1, DataGridView dt, byte[] data)
+        {
+            try
+            {
+                mycon = new SqlConnection(sqlcon);
+                mycon.Open();
+                com = new SqlCommand(sql1, mycon);
+                com.Parameters.AddWithValue("@BinaryData", data);
+                ad = new SqlDataAdapter(com);
+                DataTable tb = new DataTable();
+                ad.Fill(tb);
+                dt.DataSource = tb;
+                MessageBox.Show("Them Thanh công !", "Thong báo ");
+                mycon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "" + ex);
+            }
 
+        }
 
         public static void them_dl1(string sql1)
         {
@@ -377,7 +397,29 @@ namespace QuanLySieuThi
                 }
             }
         }
-       
+        public static void Execute1binary(string sql, byte[] data)
+        {
+            if (MessageBox.Show("Bạn có chắc chăn muốn sửa không ? ", "Thông báo ", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+
+                try
+                {
+                    mycon = new SqlConnection(sqlcon);
+                    mycon.Open();
+                    com = new SqlCommand(sql, mycon);
+                    com.Parameters.AddWithValue("@BinaryData", data);
+                    com.ExecuteNonQuery();
+                    mycon.Close();
+                    MessageBox.Show("Bạn sửa thành công ! ", "Thông báo", MessageBoxButtons.OK);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+
+                }
+            }
+        }
+
     }
 }
 

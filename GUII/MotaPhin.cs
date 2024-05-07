@@ -21,5 +21,15 @@ namespace GUII
         {
 
         }
+
+        private void dgvThongTinChiTiet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

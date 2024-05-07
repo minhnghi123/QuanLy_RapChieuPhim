@@ -23,6 +23,10 @@ namespace GUII
         {
             title.Text = text;  
         }
+        public void setNam(string text)
+        {
+            Name.Text = text;
+        }
         public void setGiaVe(string text)
         {
            button1.Text=text;
@@ -33,7 +37,8 @@ namespace GUII
         }
         public void setPicture(Image img)
         {
-           pictureBox1.Image = img; 
+           pictureBox1.Image = img;
+            pictureBox1.SizeMode =  PictureBoxSizeMode.StretchImage;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -49,6 +54,11 @@ namespace GUII
 
             title.TextAlign = ContentAlignment.MiddleCenter;
             title.AutoSize = true;
+        }
+
+        private void Name_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
