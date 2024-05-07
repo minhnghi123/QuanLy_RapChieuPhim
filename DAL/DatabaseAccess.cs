@@ -11,7 +11,7 @@ namespace DAL
 {
     public static SqlConnection Conncect()
     {
-        string strcon = "Data Source=ALIEN\\SQLEXPRESS;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string strcon = "Data Source=LAPTOP-TT2BDHBO;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
         SqlConnection conn = new SqlConnection(strcon);
         return conn;
     }
@@ -54,6 +54,14 @@ namespace DAL
                 return "Tai Khoan Hoac Mat Khau Khong Chinh Xac"; 
             }
             return user; 
+        }
+        public class Connection
+        {
+            private static string stringConnection = @"Data Source=LAPTOP-TT2BDHBO;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+            public static SqlConnection GetSqlConnection()
+            {
+                return new SqlConnection(stringConnection);
+            }
         }
     }
 }
