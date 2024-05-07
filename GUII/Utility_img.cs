@@ -23,7 +23,7 @@ namespace GUII
 
         public static Byte[] ImageToByteArray(Image img)
         {
-           
+            if (img == null) return null;
             using (var stream = new MemoryStream())
             {
                 img.Save(stream, img.RawFormat);

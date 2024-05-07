@@ -45,6 +45,7 @@ namespace GUII
            // this.Hide();
             var f =new frmChiTietPhimDatVe();
             frmChiTietPhimDatVe.dr = dl;
+            f.setHinh(pictureBox1.Image);
             f.Show();
         }
 

@@ -18,7 +18,10 @@ namespace GUII
         {
             InitializeComponent();
         }
-
+        public void setHinh(Image img)
+        {
+            pictureBox1.Image = img;
+        }
         private void frmChiTietPhimDatVe_Load(object sender, EventArgs e)
         {
             txtMaphim.Text = dr["MaPhim"].ToString();
