@@ -106,6 +106,7 @@ namespace OpenLibrary.DataAccess
                 }
             }
         }
+
         public void UpdateRowTableDungThuTuCot(DataTable dt, string dieukien, params object[] field_GiaTri)
         {
             DataView dv = new DataView(dt);
@@ -116,6 +117,20 @@ namespace OpenLibrary.DataAccess
                 for (int j = 0; j < field_GiaTri.Length; j ++)
                 {
                     dv[i][j] = field_GiaTri[j ];
+                    //   dv[i][1] = field_GiaTri[j + 1];
+                }
+            }
+        }
+        public void UpdateRowTableDungThuTuCotCoKieutudongtang(DataTable dt, string dieukien, int so, params object[] field_GiaTri)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = dieukien;
+
+            for (int i = 0; i < dv.ToTable().Rows.Count; i++)
+            {
+                for (int j = 0; j < field_GiaTri.Length; j++)
+                {
+                  if(j!=so)  dv[i][j] = field_GiaTri[j];
                     //   dv[i][1] = field_GiaTri[j + 1];
                 }
             }

@@ -8,20 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class PhimDL
+    public class PhongChieuDL
     {
         DataHelper dt = DataHelper.GetInstance();
         DataTable Phim = new DataTable();
         DataTable PhimDangChieu = new DataTable();
-        public PhimDL() { } 
-        public DataTable getPhiMDangChieu()
+        
+        public DataTable getPhong()
         {
-            PhimDangChieu = dt.FillDataTable("select* from view_phimdangchieutrongngay");
-            return PhimDangChieu;
-        }
-        public DataTable getPhiM()
-        {
-            PhimDangChieu = dt.FillDataTable("select* from Phim");
+            PhimDangChieu = dt.FillDataTable("select* from PhongChieu");
             return PhimDangChieu;
         }
     }

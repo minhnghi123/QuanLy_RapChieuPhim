@@ -11,7 +11,7 @@ namespace DAL
 {
     public static SqlConnection Conncect()
     {
-        string strcon = "Data Source=ALIEN\\SQLEXPRESS;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string strcon = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         SqlConnection conn = new SqlConnection(strcon);
         return conn;
     }
