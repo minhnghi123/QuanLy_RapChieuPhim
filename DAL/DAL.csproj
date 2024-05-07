@@ -46,6 +46,7 @@
     <Compile Include="DataHelper.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoaiNhanVienDL.cs" />
+    <Compile Include="Modify.cs" />
     <Compile Include="PhimDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLNhanVienDL.cs" />
