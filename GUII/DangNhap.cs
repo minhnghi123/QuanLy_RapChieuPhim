@@ -64,5 +64,11 @@ namespace GUII
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DangKy dangKy = new DangKy();
+            dangKy.ShowDialog();
+        }
     }
 }
