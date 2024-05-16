@@ -1,5 +1,4 @@
 ﻿
-using DevExpress.Xpo.DB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static DevExpress.XtraEditors.Mask.MaskSettings;
 using BLL;
 using GUII;
 using QuanLySieuThi.quanly;
@@ -30,113 +28,46 @@ namespace DuAn_RapChieuPhim
         {
             
         }
+        private Form currentFormChild;
+        private void OpenChildForm(Form chilForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = chilForm;
+            chilForm.TopLevel = false;
+            chilForm.FormBorderStyle = FormBorderStyle.None;
+            chilForm.Dock = DockStyle.Fill;
+            panel_body.Controls.Add(chilForm);
+            panel_body.Tag = chilForm;
+            chilForm.BringToFront();
+            chilForm.Show();
+        }
+        private void btnQLPhim_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new sanpham());
+            label1.Text = btnQLPhim.Text;
+        }
+        private void btnRap_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Rap());
+            label1.Text = btnRap.Text;
+        }
+        private void btnQLSC_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQLSuatChieu());
+            label1.Text = btnQLSC.Text;
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
 
-        private void rạpToolStripMenuItem_Click(object sender, EventArgs e)
+        }
+        private void btnDX_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var f = new Rap();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new DangNhap();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void đăngKýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new DangKy();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void xemThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new TaiKhoan();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
             DangNhap f = new DangNhap();
             f.Show();
-        }
-
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnLýPhimToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new sanpham();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void quảnLýRạpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new Rap();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void phimToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new frmDatVeXemPhim();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void lịchChiếuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new frmHoaDon();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void quảnLýSuấtChiếuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var f = new frmQLSuatChieu();
-            // Gắn sự kiện Closed cho Form Phim để hiển thị lại Form TrangChu khi Form Phim đóng
-            f.Closed += (s, args) => this.Show();
-            f.ShowDialog();
-        }
-
-        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
