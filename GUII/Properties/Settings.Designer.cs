@@ -33,5 +33,16 @@ namespace GUII.Properties {
                 return ((string)(this["QL_RapChieuPhimConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=acer\\phuoc;Initial Catalog=xedap;Integrated Security=True;Encrypt=Tru" +
+            "e;TrustServerCertificate=True")]
+        public string xedapConnectionString {
+            get {
+                return ((string)(this["xedapConnectionString"]));
+            }
+        }
     }
 }
