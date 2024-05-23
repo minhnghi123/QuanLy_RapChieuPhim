@@ -149,6 +149,12 @@
     <Compile Include="frmQLSuatChieu.Designer.cs">
       <DependentUpon>frmQLSuatChieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXemThongKeXeDap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemThongKeXeDap.Designer.cs">
+      <DependentUpon>frmXemThongKeXeDap.cs</DependentUpon>
+    </Compile>
     <Compile Include="MotaPhin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,17 @@
       <DependentUpon>UserControlPhim.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility_img.cs" />
+    <Compile Include="xedapDataSet.Designer.cs" />
+    <Compile Include="xedapDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>xedapDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="xedapDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>xedapDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="XuatExecl.cs" />
     <EmbeddedResource Include="ChonGhe.resx">
       <DependentUpon>ChonGhe.cs</DependentUpon>
@@ -236,6 +253,9 @@
     <EmbeddedResource Include="frmQLSuatChieu.resx">
       <DependentUpon>frmQLSuatChieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmXemThongKeXeDap.resx">
+      <DependentUpon>frmXemThongKeXeDap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MotaPhin.resx">
       <DependentUpon>MotaPhin.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,8 +275,10 @@
     </Compile>
     <EmbeddedResource Include="Rap.resx">
       <DependentUpon>Rap.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="sanpham.resx">
       <DependentUpon>sanpham.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +301,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="xedapDataSet.xsc">
+      <DependentUpon>xedapDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="xedapDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>xedapDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xedapDataSet.xss">
+      <DependentUpon>xedapDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="xedapDataSet1.xsc">
+      <DependentUpon>xedapDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="xedapDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>xedapDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xedapDataSet1.xss">
+      <DependentUpon>xedapDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -287,6 +331,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{8326f619-8d7e-40f4-95b7-2907f47e4cf4}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{2c568dc9-10e0-48c1-bbca-00c5acb0381d}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{c26bf36b-96b9-4de8-bff0-79e5d90fd6ef}</Project>

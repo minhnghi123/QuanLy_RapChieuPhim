@@ -12,9 +12,12 @@ GO
 CREATE TABLE [USER](
 	Id INT PRIMARY KEY IDENTITY(1, 1),
 	UserName VARCHAR(20) NOT NULL,
-	[PassWord] VARCHAR(20) NOT NULL,
-	[MaLoai] INT NOT NULL
+	PassWord VARCHAR(20) NOT NULL,
+	Email VARCHAR(30) NOT NULL,
+	MaLoai INT NOT NULL
 )
+
+insert inot 
 go
 GO
 create proc [dbo].[proc_login] @user nvarchar(50), @pass nvarchar(50)
@@ -24,8 +27,8 @@ begin
 end
 GO
 GO
-INSERT INTO [USER] (UserName,[PassWord],[MaLoai]) VALUES ('user','123', 2)
-INSERT INTO [USER] (UserName,[PassWord],[MaLoai]) VALUES ('admin','123', 1)
+INSERT INTO [USER] (UserName,PassWord,Email,MaLoai) VALUES ('user','123','2@gmail.com', 2)
+INSERT INTO [USER] (UserName,PassWord,Email,MaLoai) VALUES ('admin','123','1@gmail.com', 1)
 GO
 
 CREATE TABLE Phim (
