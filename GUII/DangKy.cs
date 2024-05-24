@@ -44,7 +44,7 @@ namespace DuAn_RapChieuPhim
         {
 
         }
-        Modify modify = new Modify();
+        DataHelper dt = DataHelper.GetInstance();
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             string UserName = textBox_TenTaiKhoanDK.Text;
@@ -57,7 +57,7 @@ namespace DuAn_RapChieuPhim
             try
             {
                 string query = "insert into [USER] values ('" + UserName + "','" + PassWord + "','" + Email + "','" + MaLoai + "')";
-                modify.Command(query);
+                dt.ExecuteNonQuery(query);
                 if (MessageBox.Show("đăng ký thành công! bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     this.Close();

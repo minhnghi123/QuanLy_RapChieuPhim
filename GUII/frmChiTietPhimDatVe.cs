@@ -21,6 +21,7 @@ namespace GUII
         public void setHinh(Image img)
         {
             pictureBox1.Image = img;
+            pictureBox1.SizeMode= PictureBoxSizeMode.Zoom;
         }
         private void frmChiTietPhimDatVe_Load(object sender, EventArgs e)
         {

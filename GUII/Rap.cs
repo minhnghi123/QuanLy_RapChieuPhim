@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using DAL;
 namespace DuAn_RapChieuPhim
 {
     public partial class Rap : Form
@@ -25,7 +25,7 @@ namespace DuAn_RapChieuPhim
         public void connect()
         {
             //Lấy chuỗi kết nối CSDL
-            string strcon = "Data Source=LAPTOP-PICGBI40\\HONGPHUC;Initial Catalog=QL_RapChieuPhim;Integrated Security=True;";
+            string strcon = DataHelper.getchuoi();
             try
             {
                 conn = new SqlConnection(strcon);

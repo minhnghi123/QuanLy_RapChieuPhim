@@ -61,13 +61,20 @@ namespace DuAn_RapChieuPhim
         }
         private void button4_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmQLPhongchieu());
+            label1.Text = "";
         }
         private void btnDX_Click(object sender, EventArgs e)
         {
             this.Hide();
             DangNhap f = new DangNhap();
             f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmDatVeXemPhim());
+            label1.Text = "";
         }
     }
 }

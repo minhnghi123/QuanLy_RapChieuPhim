@@ -17,7 +17,7 @@ namespace GUII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQLPhongchieu());
+            Application.Run(new DangNhap());
         }
     }
 }
