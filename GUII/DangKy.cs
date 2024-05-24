@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
-using OpenLibrary.DataAccess;
+using DAL;
 using DevExpress.XtraPivotGrid.Utils.DateHelpers;
 
 namespace DuAn_RapChieuPhim

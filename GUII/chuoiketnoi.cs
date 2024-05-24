@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-
+using DAL;
+using DevExpress.XtraPrinting.Native;
 
 namespace QuanLySieuThi
 {
     class chuoiketnoi
     {
-        public static string sqlcon = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+        DataHelper dt1=DataHelper.GetInstance();
+        public static string sqlcon = DataHelper.getchuoi();
         private static SqlConnection mycon;
 
         public static SqlConnection Mycon

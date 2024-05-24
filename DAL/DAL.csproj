@@ -54,7 +54,6 @@
     <Compile Include="SuatChieuDL.cs" />
     <Compile Include="TaiKhoanAccess.cs" />
     <Compile Include="VeDL.cs" />
-    <Compile Include="XemThongKeXeDaoDL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

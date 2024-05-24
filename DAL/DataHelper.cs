@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace OpenLibrary.DataAccess
+namespace DAL
 {
     public class DataHelper
     {       
@@ -16,8 +16,16 @@ namespace OpenLibrary.DataAccess
         SqlConnection con;
         private DataHelper()
         {
-            ChuoiKetNoi = "Data Source=acer\\phuoc;Initial Catalog=Xedap;Integrated Security=True";
+            ChuoiKetNoi = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
             con = new SqlConnection(ChuoiKetNoi);
+        }
+        public SqlConnection getcon()
+        {
+            return con;
+        }
+        public static string getchuoi()
+        {
+            return ChuoiKetNoi;
         }
         public static DataHelper GetInstance()
         {

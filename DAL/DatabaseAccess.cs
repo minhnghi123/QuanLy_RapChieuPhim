@@ -4,16 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO; 
+using DTO;
+
 namespace DAL
 { 
     public class SqlConnectionData
 {
     public static SqlConnection Conncect()
     {
-        string strcon = "Data Source=LAPTOP-TT2BDHBO;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
-        SqlConnection conn = new SqlConnection(strcon);
-        return conn;
+        DataHelper dt =DataHelper.GetInstance();
+        return dt.getcon();
     }
 }
 

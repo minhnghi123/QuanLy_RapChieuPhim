@@ -11,7 +11,7 @@ namespace DAL
    
         public class DataProvider
         {
-            private string connectionString = "Data Source=LAPTOP-TT2BDHBO;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
+            private string connectionString = "Data Source=acer\\phuoc;Initial Catalog=QL_RapChieuPhim;Integrated Security=True";
 
             private DataProvider()
             {
